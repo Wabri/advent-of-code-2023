@@ -24,13 +24,6 @@ func main() {
 		firstDigit := extractFrom(line)
 		line = reverseButKeepOrder(line)
 		lastDigit := extractFrom(line)
-		// lastDigit := 0
-		// if len(line) > 1 {
-		// 	lastDigit = extractFrom(line)
-		// } else {
-		// 	lastDigit = firstDigit
-		// 	firstDigit = 0
-		// }
 		totalCalibration += firstDigit*10 + lastDigit
 	}
 
@@ -95,6 +88,8 @@ func extractDigit(word string) int {
 
 func isADigit(word string) (bool, int) {
 	switch word {
+	case "zero":
+		return true, 0
 	case "one":
 		return true, 1
 	case "two":
